@@ -59,8 +59,6 @@ func (r *RateLimiter) Allow() bool {
 }
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
-
 	port := os.Getenv("PORT")
 	if strings.TrimSpace(port) == "" {
 		port = "8080"
